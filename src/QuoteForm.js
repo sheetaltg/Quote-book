@@ -24,7 +24,7 @@ const QuoteForm = (props) => {
         }
         setName('')
         setBody('')
-        setId('')
+        
     }
 
     const handleNameChange = (e) => {
@@ -40,10 +40,10 @@ const QuoteForm = (props) => {
             <h2> Add Quote </h2>
             <form onSubmit={handleSubmit}>
                 <label>Name</label> <br/>
-                <input type="text" value={name} onChange={handleNameChange} /> <br />
+                <input type="text" size="30" value={name} onChange={handleNameChange} /> <br />
 
                 <label> Body </label>  <br/>
-                <textarea value={body} onChange={handleBodyChange}></textarea> <br />
+                <textarea cols="32" rows="4" value={body} onChange={handleBodyChange} ></textarea> <br />
 
                 <input type="submit" value="Save" class="btn btn-primary btn-sm"/>
             </form>
