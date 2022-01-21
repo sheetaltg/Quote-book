@@ -4,9 +4,10 @@ import QuoteForm from './QuoteForm'
 const EditQuote = (props) => {
     const { id, name, body, editItem, handleToggle } = props
 
-    const formSubmission = (FormData) => {
-        //console.log('eddit', FormData)
-        editItem(FormData)
+    const formSubmission = (formData) => {
+        //console.log('eddit', formData)
+        editItem(formData)
+        handleToggle()
     } 
 
     return (

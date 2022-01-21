@@ -10,6 +10,7 @@ const AddQuote = (props) => {
 
     return (
         <div>
+            <h2 className="display-6"> Add Quote </h2>
             <QuoteForm formSubmission={formSubmission}/>
         </div>
     )

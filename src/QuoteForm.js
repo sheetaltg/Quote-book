@@ -12,7 +12,7 @@ const QuoteForm = (props) => {
         const formData = {
             id: id,
             name: name,
-            body: body
+            body: body            
         }
         //console.log('form data', formData)
         //addItem(formData)
@@ -22,6 +22,7 @@ const QuoteForm = (props) => {
         if(handleToggle) {
             handleToggle()
         }
+        
         setName('')
         setBody('')
         
@@ -37,16 +38,20 @@ const QuoteForm = (props) => {
 
     return (
         <div>
-            <h2> Add Quote </h2>
+            
+            <div className="card text-dark bg-light">
+            <div className="card-body">
             <form onSubmit={handleSubmit}>
                 <label>Name</label> <br/>
-                <input type="text" size="30" value={name} onChange={handleNameChange} /> <br />
+                <input type="text" style={{width: "100%"}} value={name} onChange={handleNameChange} /> <br />
 
                 <label> Body </label>  <br/>
-                <textarea cols="32" rows="4" value={body} onChange={handleBodyChange} ></textarea> <br />
+                <textarea style={{width: "100%"}} value={body} onChange={handleBodyChange} ></textarea> <br />
 
-                <input type="submit" value="Save" class="btn btn-primary btn-sm"/>
+                <input type="submit" value="Save" className="btn btn-primary btn-sm"/>
             </form>
+            </div>
+            </div>
         </div>
     )
 }

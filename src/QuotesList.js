@@ -1,5 +1,6 @@
 import React from 'react'
 import QuotesItem from './QuotesItem'
+
 const QuotesList = (props) => {
     const { quotes, removeItem, editItem } = props
     return (
@@ -12,14 +13,19 @@ const QuotesList = (props) => {
                     </div>
                 ) : (
                     <div>
-                        <h3> My Quotes - { quotes.length } </h3>
-                        { quotes.map((quote) => {
-                            return <QuotesItem 
+                        <h3 className="display-6"> My Quotes - { quotes.length } </h3>
+                        { quotes.map((quote,i) => {
+                            return (
+                                    <div key={i}>
+                                        <QuotesItem 
                                         key={quote.id} {...quote}  
                                         removeItem={removeItem}
                                         editItem={editItem}
-                            />
+                                        /> &nbsp;
+                                    </div> 
+                                    )
                         })}
+                        
                     </div>
                 )
              } 

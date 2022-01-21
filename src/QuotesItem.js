@@ -11,7 +11,7 @@ const QuotesItem = (props) => {
             removeItem(id)
         }
     }
-
+    
     const handleToggle = () => {
         const result =!toggle 
         setToggle(result) // setToggle(!toggle)
@@ -28,14 +28,15 @@ const QuotesItem = (props) => {
                         editItem={editItem}
                         handleToggle={handleToggle}
                     /> 
-                    <button onClick={handleToggle} type="button" class="btn btn-primary btn-sm">cancel</button>
+                    <button onClick={handleToggle} type="button" className="btn btn-primary btn-sm">cancel</button>
                 </div>
             ) : (
-                <div> 
-                    <blockquote> { body } <br/>--{ name } </blockquote>
-                    <button onClick={handleToggle} type="button" class="btn btn-primary btn-sm"> edit </button> &nbsp;
-                    <button onClick={handleRemove} type="button" class="btn btn-primary btn-sm"> remove </button>
-                    
+                <div className="card text-dark bg-light">
+                    <div className="card-body">
+                        <p className="card-text">{ body } <br/>--{ name } </p>
+                        <button  style={{ marginLeft: '.5rem' }} onClick={handleToggle} type="button" className="btn btn-primary btn-sm float-end"> edit </button> &nbsp;
+                        <button onClick={handleRemove} type="button" className="btn btn-primary btn-sm float-end"> remove </button>
+                    </div>
                 </div>
             )}
            
