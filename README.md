@@ -1,6 +1,7 @@
 ![QuoteBook](https://github.com/sheetaltg/Quote-book/assets/14239770/9930e806-fee2-4aa3-a172-09a4ff6b2ffb)
+# Wireframe using Balsamiq Mockups
 
-Demo URL: https://quotebook.ganeshgudi.com/
+# Demo URL: https://quotebook.ganeshgudi.com
 
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
